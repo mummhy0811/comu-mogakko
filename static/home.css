@@ -1,0 +1,49 @@
+ /*bottom 컨테이너 아이템*/
+ .updated-board{
+    flex:1;
+    display: flex;
+    margin-top: -20px;
+  }
+  .miniroom-board{
+    flex:1;
+    display:flex;
+
+  }
+/*updated-board컨테이너 아이템*/
+  .newtitle{
+    flex:1;
+  }
+  .leftlist{
+    flex:0.5;
+  }
+  .rightlist{
+    flex:0.5;
+  }
+  /*newtitle 에 들어가는 list id*/
+  #photo{
+    padding:0.1rem;
+    background-color: lightcoral;
+    border-radius: 2px;
+    color: white;
+  }
+  #diary{
+    padding:0.1rem;
+    background-color: rgb(169, 209, 161);
+    border-radius: 2px;
+    color:white;
+  }
+  #hello{
+    padding:0.1rem;
+    background-color: rgb(231, 195, 140);
+    border-radius: 2px;
+    color:white;
+  }
+  #cording{
+    padding:0.1rem;
+    background-color: rgb(161, 152, 212);
+    border-radius: 2px;
+    color:white;
+  }
+
+  /*메뉴*/
+  
