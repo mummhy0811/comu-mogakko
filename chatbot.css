@@ -1,0 +1,33 @@
+.bubble{
+    font-size: 45px;
+    border: 5px solid rgb(255, 236, 197);
+    border-radius: 10px;
+    padding:15px;
+    text-align: center;
+    margin:10px;
+    width: 500px;
+}
+#container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type="button"]{
+    border-color: white;
+    padding:0 15px;
+    background-color: rgb(255, 236, 197);
+}
+input[type="inputtext"]{
+    border: 5px solid rgb(255, 236, 197);
+    width: 400px;
+}
+body{
+    font-size: 25px;
+    font-family: 'Dongle', sans-serif;
+}
+input{
+    border-radius: 12px;
+    font-size: 25px;
+    font-family: 'Dongle', sans-serif;
+    margin:10px;
+}
