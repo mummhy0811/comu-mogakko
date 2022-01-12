@@ -37,9 +37,8 @@ DOM은 Document Object Model의 약어이며, html 파일을 텍스트의 트리
 ![html돔구조](https://user-images.githubusercontent.com/76941500/149151255-2271c26f-17fd-4876-a1b5-b5f83b2cee33.jpg)
 
 *DOM에 접근하기   
-  document.getElementById('아이디').innerHTML
-
+    document.getElementById('아이디').innerHTML   
 해당 아이디의 요소를 선택   
-  document.getElementByTagName('태그이름').innerHTML
+    document.getElementByTagName('태그이름').innerHTML   
 해당 태그 이름의 요소를 모두 선택   
 등 여러가지 함수를 가지고 있다.
