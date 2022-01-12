@@ -29,18 +29,17 @@ html파일에 javascript코드 사용하기
 1번의 경우는 코드가 길어지면 수정도 힘들고, 재사용성도 좋지 않아서 자주 사용하지 않는다.   
 따라서 scriptsrc를 사용해 링크를 거는 방법을 더 많이 사용한다.
 
+***
 
 DOM
 ============
 DOM은 Document Object Model의 약어이며, html 파일을 텍스트의 트리 형태로 표현한 것을 말한다.   <예시>   
 ![html돔구조](https://user-images.githubusercontent.com/76941500/149151255-2271c26f-17fd-4876-a1b5-b5f83b2cee33.jpg)
 
-*DOM에 접근하기
-'''
-document.getElementById('아이디').innerHTML
-'''
+*DOM에 접근하기   
+  document.getElementById('아이디').innerHTML
+
 해당 아이디의 요소를 선택   
-'''
-document.getElementByTagName('태그이름').innerHTML
-'''
+  document.getElementByTagName('태그이름').innerHTML
 해당 태그 이름의 요소를 모두 선택   
+등 여러가지 함수를 가지고 있다.
