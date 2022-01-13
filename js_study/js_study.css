@@ -1,19 +1,16 @@
-.showText{
-    margin:5px;
-}
-.showButton{
-    margin:5px;
-}
-.clearButton{
-    margin:5px;
-}
 button{
     font-family: 'Do Hyeon', sans-serif;
     padding: 10px;
-    background-color: wheat;
-    border: 2px solid orange;
+    margin:10px;
+    color: white;
+    background-color: gray;
+    border: 2px solid black;
     border-radius: 150px;
 }
 body{
+    background-color: rgb(255, 216, 216);
     font-family: 'Do Hyeon', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
