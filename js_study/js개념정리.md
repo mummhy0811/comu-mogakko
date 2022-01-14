@@ -43,6 +43,7 @@ DOM은 Document Object Model의 약어이며, html 파일을 텍스트의 트리
 * DOM에 접근하기   
 >	document.getElementById('아이디').innerHTML   
 해당 아이디의 요소를 선택   
+
 >	document.getElementByTagName('태그이름').innerHTML   
 해당 태그 이름의 요소를 모두 선택   
 
@@ -56,6 +57,7 @@ Console
 콘솔은 텍스트로 실행의 결과를 확인할 수 있는 일종의 디스플레이 장치이다.   
 html에서는   
 >	console.log("콘솔내용");   
+
 위와 같은 코드를 통해 콘솔에 텍스트를 출력할 수 있다.   
 콘솔에서는 실행 결과 확인뿐 아니라 간단한 연산이나, 변수의 현재 값을 확인할 수도 있다.   
 즉, 현재 프로그램이 잘 실행되고 있는지 확인할 수 있는 화면임과 동시에, 테스트를 진행할 수 있는 도구가 될 수 있다.   
