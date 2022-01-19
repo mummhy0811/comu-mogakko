@@ -104,54 +104,56 @@ html에서는
 조건문
 ============   
 1. if-else   
->	
-if (표현식1){
-	실행문1;
-}else if(표현식2){
-	실행문2;
-}else{
-	실행문3;
+```   	
+if (표현식1){   
+	실행문1;   
+}else if(표현식2){   
+	실행문2;   
+}else{   
+	실행문3;   
+}   
+```   	
+2. switch      
+```   	
+switch(조건값){   
+ case 값1:   
+	실행문1;   
+	break;   
+ case 값2:   
+	실행문2;   
+	break;   
+ case 값3:   
+	실행문3;   
+	break;   
+ default:   
+	실행문4;   
+	break;   
 }
-
-2. switch   
->	
-switch(조건값){
- case 값1:
-	실행문1;
-	break;
- case 값2:
-	실행문2;
-	break;
- case 값3:
-	실행문3;
-	break;
- default:
-	실행문4;
-	break;
-}
-
+```   	
 어느 case의 값과도 일치하지 않으면 default의 내용이 실행된다.   
 
 
 반복문
 ============   
 1. while문   
->	
-while(조건문){
-	실행문
-}
+```   	
+while(조건문){   
+	실행문   
+}   
+```   
 
 2. do-while문   
->	
-do{
-	실행문
-}while(조건문);
+```   
+do{   
+	실행문   
+}while(조건문);   
+```   
 
 3. for문   
->	
-for(var i = 0 ; i < 10 ; i++){
- 실행문
-}
-
+```   
+for(var i = 0 ; i < 10 ; i++){   
+ 실행문   
+}   
+```   
 
 ***
