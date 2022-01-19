@@ -1,50 +1,41 @@
-var h=0, m=0, s=0, ms=0;
-var sp=document.getElementsByTagName('span');
-var timer;
+var inp, loop, count=0, printing="", word="", r=0, g=0, b=0;
+var h1=document.getElementsByTagName('h1');
 
-function hour(){
-    h=parseInt(sp[0].innerHTML);
-    h++;
-    sp[0].innerHTML=h>=10?h:"0"+h;
+function autostart(){
+    inp=document.getElementById('inputword').value; //입력된 값 가져옴
+    word="Hello! "+inp; //출력할 문구
+    loop=setInterval(sign, 250);
 }
-function minute(){
-    m=parseInt(sp[1].innerHTML);
-    m++;
-    if(m==60){
-        hour();
-        m=0;
-    }
-    sp[1].innerHTML=m>=10?m:"0"+m;
-}
-function second(){
-    s=parseInt(sp[2].innerHTML);
-    s++;
-    if(s==60){
-        minute();
-        s=0;
-    }
-    sp[2].innerHTML=s>=10?s:"0"+s;
-}
-function millisec(){
-    ms=parseInt(sp[3].innerHTML);
-    ms++;
-    if(ms==100){
-        second();
-        ms=0;
-    }
-    sp[3].innerHTML=ms>=10?ms:"0"+ms;
-}
-
-
 function start(){
-    timer=setInterval(millisec, 10);
+    stop();
+    inp=document.getElementById('inputword').value; //입력된 값 가져옴
+    word="Hello! "+inp; //출력할 문구
+    sign();
 }
 function stop(){
-    clearInterval(timer);
+    clearInterval(loop);
 }
 function reset(){
-    stop();
-    for(var i=0;i<4;i++){
-        sp[i].innerHTML="00";
+    count=0; 
+    printing="";
+    h1[0].innerHTML=printing;
+}
+function sign(){
+    if(count==word.length) { //문구 한 줄 출력이 끝났으면
+        reset(); //처음으로 돌아감
     }
+    printing+=word[count];
+    randomcolor();
+    h1[0].innerHTML=printing;
+    count++;
+}
+function randomcolor(){
+    color="#"
+    r=Math.floor(Math.random() * 200)+50;
+    g=Math.floor(Math.random() * 100)+50;
+    b=Math.floor(Math.random() * 100)+50;
+    color+=r;
+    color+=g;
+    color+=b;
+    h1[0].style.color=color;
 }

@@ -7,8 +7,6 @@ button{
     width: 100px;
 }
 body{
-    color:white;
-    background-color: black;
     font-family: 'Do Hyeon', sans-serif;
     display: flex;
     flex-direction: column;
