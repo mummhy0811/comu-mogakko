@@ -1,23 +1,98 @@
-button{
-    font-family: 'Do Hyeon', sans-serif;
-    padding: 5px;
-    margin:25px;
-    border: 2px solid rgb(190, 190, 190);
-    border-radius: 10px;
-}
 body{
     font-family: 'Do Hyeon', sans-serif;
     display: flex;
     flex-direction: column;
-    font-size: 40px;
+    font-size: 10px;
 }
-.text{
+button{
+    background-color: rgb(37, 37, 37);
+    border-radius: 10px;
+    border:0;
+    outline: 0;
+    margin: 2.5px;
+}
+
+.machine{
     display:flex;
     flex-direction: column;
-    margin-left: 50px;
-    font-size: 15px;
+    align-items: center;
+    width:220px;
+    height: 450px;
+    background-color: black;
+    border-radius: 15px;
+    margin:auto;
 }
-.buttonBox{
-    display:flex;
-    margin-left:100px;
+#phoneBook_screen, #callScreen{
+    background-color: rgb(37, 37, 37);
+    margin-top:40px;
+    width:200px;
+    height:360px;
+    display: flex;
+    flex-direction: column;
+}
+#phoneBook_screen{
+    display: block;   
+}
+#callScreen{
+    display:none;
+}
+.information{
+    color:white;
+    text-align: center;
+    margin:30px;
+}
+.menu, .bar{
+    display: flex;
+    color:white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#kt, #find{
+    flex:1;
+}
+#clock{
+    flex:1;
+    text-align: center;
+}
+#battery, #edit{
+    flex:1;
+    text-align: right;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    margin:auto;
+}
+#name{
+    text-align: center;
+}
+.msg, .emergency{
+    background-color: rgb(70, 70, 70);
+    border-radius: 5px;
+    margin:2px;
+    padding: 5px;
+    color:rgb(158, 184, 255);
+}
+.memo{
+    background-color: rgb(70, 70, 70);
+    border-radius: 5px;
+    margin:2px;
+    padding: 5px;
+    color:white;
+}
+.block{
+    background-color: rgb(70, 70, 70);
+    border-radius: 5px;
+    margin:2px;
+    padding: 5px;
+    color:red;
+}
+.homebutton{
+    background-color: rgb(37, 37, 37);
+    border-radius: 15px;
+    margin:10px;
+    width:30px;
+    height: 30px;;
 }
