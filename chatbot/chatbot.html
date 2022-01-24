@@ -2,7 +2,7 @@
 <html lang="ko">
 <meta charset="UTF-8" />
 <head>
-    <title> html 복습하기 </title>
+    <title> 말하는 고양이 </title>
     <link rel = "stylesheet" href="./chatbot.css"/> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,11 +12,12 @@
 <body >
     <div id="container">
         <div class="bubble">
-            <p> 안녕! 만나서 반가워</p>
+            <p> 안냥! 만나서 반가워</p>
         </div>
         <img src="cat.jfif" alt="인사하는 고양이" width=350px>
-        <input type="inputtext"  placeholder=" 메세지를 적어주세요.">
-        <input type="button" value="전송하기"/>
+        <input type="inputtext"  placeholder=" 메세지를 적어주세요." id="console">
+        <input type="button" value="전송하기" id="send"/>
     </div>
+    <script src="./chatbot.js"></script>
 </body>
 </html>
