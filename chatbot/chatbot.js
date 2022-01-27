@@ -3,6 +3,19 @@ var body=document.getElementsByTagName('body');
 var img=document.getElementsByTagName('img');
 let n=0, follow=0 ;
 
+var app = document.getElementById('app');
+var typewriter = new Typewriter(app, {
+	loop: true
+});
+
+typewriter.typeString('도움이 필요하면 help를 보내주세요.')
+	.pauseFor(1000)
+	.deleteAll()
+	.typeString('예시 명령어들을 알 수 있어요!')
+	.pauseFor(1000)
+	.deleteAll()
+	.start();
+
 function check_text(){
     let value = document.getElementById("console").value;
 
@@ -68,7 +81,6 @@ function check_text(){
 			p[0].innerHTML="이제부터 말 따라할거다 냥!";
 			img[0].src="chatbot/얄미운 고양이.jpg";
 		}
-
 	}
 	else if(follow==1) { //따라하는 중인 코드
 		if(value.includes("그만")){ 
@@ -93,3 +105,4 @@ function press_enter(){
 	}
 }
 document.getElementById('send').addEventListener('click', check_text);
+
