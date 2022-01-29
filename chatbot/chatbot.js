@@ -1,8 +1,10 @@
 var p=document.getElementsByTagName('p');
 var body=document.getElementsByTagName('body');
 var img=document.getElementsByTagName('img');
-let n=0, follow=0 ;
-
+var n=0, follow=0 ;
+var question = ""; //질문 임시 저장
+var answer = ""; //대답 임시 저장
+var key = 0; // 말 배울지 말지 결정
 var app = document.getElementById('app');
 var typewriter = new Typewriter(app, {
 	loop: true
@@ -16,9 +18,55 @@ typewriter.typeString('도움이 필요하면 help를 보내주세요.')
 	.deleteAll()
 	.start();
 
-function check_text(){
-    let value = document.getElementById("console").value;
+var json=[
+	{
+		"question" : "이름",
+		"answer" : "야옹이"
+	}
+]
 
+function text_check(){
+	let value = document.getElementById("console").value;
+	if(key == 1){
+		if(value == "네"){ 
+			p[0].innerHTML = "가르칠 대답을 입력해주세요!";
+			key = 2;
+		}
+		else{ //원하지 않을 경우
+			p[0].innerHTML = "냥!";
+			key = 0;
+		}
+		return;
+	}
+	if(key == 2){
+		answer = value; //전역변수 answer값에 사용자의 입력을 저장
+		push_json(); //json 데이터에 값을 추가
+		return;
+	}
+
+	for(let i = 0; i < json.length; i++){ //jason에 등록 돼있는지 확인
+		if(value == json[i].question){ 
+			p[0].innerHTML = json[i].answer; 
+			img[0].src="chatbot/첫 화면.jpg";
+			return;
+		}
+	}
+	//jason에 저장되어있지 않으면
+	p[0].innerHTML = "미안해요 무슨 말인지 모르겠어요. 말을 가르쳐 주실래요? (네 or 아니요)";
+	img[0].src="chatbot/삐짐.jpg";
+	question = value; //사용자의 질문을 미리 저장
+	key = 1;
+}
+
+function push_json(){
+	json.push({question: `${question}`, answer: `${answer}`}); //json이라는 데이터에 값을 추가하는 push함수
+	p[0].innerHTML = "야옹이가 새로운 말을 배웠어요!";
+	img[0].src="chatbot/공부.jpg";
+	key = 0; 
+}
+
+function check_text(){
+	let value = document.getElementById("console").value;
 	if(value.includes("안녕") || value.includes("반가워")){
 		img[0].src="chatbot/cat.jfif";
 		p[0].innerHTML="만나서 반가워";
@@ -71,11 +119,11 @@ function check_text(){
 		img[0].src="chatbot/볼.jpg";
 	}
 	else{
-		img[0].src="chatbot/첫 화면.jpg";
-		p[0].innerHTML="미안 무슨 뜻인지 모르겠어";
+		text_check();
 	}
 
-	if(follow==0){//따라하기 코드
+	//따라하기 코드
+	if(follow==0){
 		if(value.includes("따라해")){
 			follow=1;
 			p[0].innerHTML="이제부터 말 따라할거다 냥!";
@@ -93,7 +141,6 @@ function check_text(){
 			img[0].src="chatbot/캐릭터.jpg";
 		}
 	}
-
 	if(value.includes("help")){
 		p[0].innerHTML="야옹이의 키워드에는 불 켜줘!, 불 꺼줘!, 운동, 뽀뽀, 따라해봐, 게임 등이 있습니다. 야옹이와 함께 즐거운 시간 보내세요!";
 	}
