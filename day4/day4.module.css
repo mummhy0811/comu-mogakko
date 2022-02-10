@@ -1,0 +1,17 @@
+.body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.text{
+    margin-top:100px;
+    font-size: 50px;
+    color:darkslateblue;
+}
+.button{
+    border: 3px white;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 5px 15px;
+    font-size: 20px;
+}
