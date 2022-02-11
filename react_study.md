@@ -84,3 +84,39 @@ var로 변수를 선언하면 값은 증가하지만, 상태는 변경되지 않
 3. 부모에게 받은 Props가 변경될 때   
 4. forceUpdate 함수가 실행될 때   
 
+Props   
+------------------------------------
+props는 부모 컴포넌트에서 자식 컴포넌트로 전달되는 데이터를 말한다. (단방향)   
+
+* 사용 예시
+```   	
+function Prac(props) {
+  return <button onClick={props.onClick}>{props.text}</button>;
+}
+```   
+props를 받는 가장 기본적인 방식. props의 onClick, text의 요소를 사용하는 것을 알 수 있다.    
+
+* 비구조화 할당
+```   	
+function Prac({text, onClick}) {
+  return <button onClick={onClick}>{text}</button>;
+}
+```   
+객체를 넣는 대신 관련 요소를 직접 넣어준 것이다. 이렇게 하면 코드의 가독성도 올라간다는 장점이 있다.   
+
+* children
+컴포넌트 안에 다른 태그나 컴포넌트를 담는 방법.
+```   	
+function Layout({ children }) {
+  return <div>{children}</div>;
+}
+```   
+children은 값 대신 자식 태그를 값으로 갖는다.
+```   	
+    <Layout>
+      <div> Hello </div>
+      <Button text="world!" />
+    </Layout>
+```   
+App컴포넌트에서 다음과 같은 코드를 return한다고 하면 Layout은div 태그 한 개와 button 태그 한 개를 자식 태그로 받게 된다.    
+
