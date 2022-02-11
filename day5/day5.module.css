@@ -1,0 +1,12 @@
+button{
+    border: 3px white;
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-size: 20px;
+}
+.container {
+    text-align: center;
+    font-size: 30px;
+    font-weight:bold;
+    padding: 10px;
+  }
