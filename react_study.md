@@ -49,10 +49,11 @@ import문을 통해 css파일을 불러와서 사용할 수 있다. HTML에서 l
 * CSS Module   
 css모듈은 기존 클래스 이름에 추가로 컴포넌트 이름과 해시값을 붙여 고유한 클래스가 되도록 만들어준다.   
 사용을 위해서는 css파일명 뒤에 module만 추가해주면 된다. 예를들어 Hello.css의 경우 Hello.module.css가 되는 것이다.   
+* import문
 ```   	
 import styles from'./Hello.module.css';
 ```   
-import를 할 때에는 위의 코드를 사용하면 된다.   
+
 
 
 ***   
@@ -79,10 +80,10 @@ react에서 useState를 import해와야 사용할 수 있다.
 var로 변수를 선언하면 값은 증가하지만, 상태는 변경되지 않아 리렌더링이 일어나지 않는다. 그렇게 되면 사용자 화면에 변경 내용이 나타나지 않기 때문에 useState를 사용한다.      
 
 > * 렌더링이 일어나는 경우   
-1. 자신의 상태가 변경될 때   
-2. 부모 컴포넌트가 리렌더링 될 때   
-3. 부모에게 받은 Props가 변경될 때   
-4. forceUpdate 함수가 실행될 때   
+> 1. 자신의 상태가 변경될 때   
+> 2. 부모 컴포넌트가 리렌더링 될 때   
+> 3. 부모에게 받은 Props가 변경될 때   
+> 4. forceUpdate 함수가 실행될 때   
 
 Props   
 ------------------------------------
@@ -113,10 +114,10 @@ function Layout({ children }) {
 ```   
 children은 값 대신 자식 태그를 값으로 갖는다.
 ```   	
-    <Layout>
-      <div> Hello </div>
-      <Button text="world!" />
-    </Layout>
+<Layout>
+  <div> Hello </div>
+  <Button text="world!"/>
+</Layout>
 ```   
-App컴포넌트에서 다음과 같은 코드를 return한다고 하면 Layout은div 태그 한 개와 button 태그 한 개를 자식 태그로 받게 된다.    
+App컴포넌트에서 위와 같은 코드를 return한다고 하면 Layout은div 태그 한 개와 button 태그 한 개를 자식 태그로 받게 된다.    
 
