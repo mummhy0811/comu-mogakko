@@ -1,21 +1,18 @@
-import Layout from './components/shared/Layout';
-import styles from './App.css';
-import React, { useState } from 'react';
-
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Explore from './pages/Explore';
+import Subscription from './pages/Subscription';
+import Assignment from './pages/Assignment';
 
 function App() {
-  const[check, toggleCheck]=useState(false);
-  function onClick(){
-    toggleCheck(!check);
-  }
 
   return(
-    <Layout>
-      <div>
-        { check ? <div className='liked'>좋아요 1개</div> : <div className='unliked'>좋아요 0개</div> }
-        <button onClick={onClick}>좋아요</button>
-      </div>
-    </Layout>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/explore" element={<Explore />} />
+      <Route path="/subscription" element={<Subscription />} />
+      <Route path="/assignment" element={<Assignment />} />
+    </Routes>
   );
 }
 
