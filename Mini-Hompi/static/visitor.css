@@ -1,0 +1,33 @@
+.visitor-list{
+    height:500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.visitor{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+.visitor-top{
+    flex:1;
+    background-color: rgb(216, 216, 216);
+    border-radius: 5px;
+    padding:0.5rem;
+}
+.visitor-bottom{
+    display:flex;
+    flex:5;
+    margin:0.5rem;
+}
+.visitor-image{
+    display: flex;
+    align-items: center;
+    flex:0.3;
+    padding:0.2rem;
+}
+.visitor-comment{
+    display: flex;
+    align-items: center;
+    flex:1;
+    padding:1rem;
+}

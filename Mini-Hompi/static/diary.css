@@ -1,0 +1,87 @@
+.cal{
+    display:flex;
+    border: 2px  solid rgb(194, 194, 194);
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 3px;
+}
+.todays-date{
+    flex:1;
+    color:steelblue;
+}
+.date-list{
+    align-items: center;
+    display:flex;
+    flex:10;
+    flex-wrap: wrap;
+}
+.date{
+    text-align: center;
+    flex:0 0 1.5rem;
+}
+.diary-list{
+    margin-top: 1rem;
+    height:450px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.mydiary{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 2px  solid rgb(194, 194, 194);
+    border-radius: 3px;
+    display:flex;
+    flex-direction: column;
+}
+.diary-date{
+    font-family: 'Gugi', cursive;
+    font-size: 0.8rem;
+    color: steelblue;
+    flex:1;
+    margin-bottom:1rem;
+}
+.diary-content{
+    font-family: 'Poor Story', cursive;
+    text-align: center;
+    flex:20;
+    margin:0.5rem;
+}
+
+.diary-list>a{
+    font-family: 'Gugi', cursive;
+    text-decoration: none;
+    background-color: white;
+    color:white;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    padding:0.7rem;
+    margin-left: 220px;
+    transition: 800ms ease all;
+}
+.diary-list > a:hover{
+    background-color: #b4d1da;
+}
+.fas{
+    margin-right:0.5rem;
+}
+.button-box{
+    display:flex;
+    justify-content: center;
+}
+.secret-button{
+    margin-top: 1rem;
+    background: #fff;
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 800ms ease all;
+    border: none;
+    border-radius: 5px;
+}
+.secret-button:hover{
+    background-color: steelblue;
+    color:white;
+}
+#secret-box{
+    display:none;
+}
