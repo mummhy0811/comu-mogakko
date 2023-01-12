@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8" />
+<head>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <title> 말하는 고양이 </title>
+    <link rel = "stylesheet" href="./chatbot.css"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+</head>
+<body >
+    <div id="container">
+        <div id="app"></div>
+        <div class="bubble">
+            <p> 안냥! 환영해 </p>
+        </div>
+        <img src="chatbot/첫 화면.jpg" alt="꿀벌 고양이" width=350px>
+        <input type="inputtext"  placeholder=" 메세지를 적어주세요." id="console" onkeyup="press_enter()">
+        <input type="button" value="전송하기" id="send"/>
+    </div>
+    <script src="./chatbot.js"></script>
+</body>
+</html>
